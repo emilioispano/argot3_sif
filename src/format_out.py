@@ -37,6 +37,7 @@ if __name__ == '__main__':
             pred[prot][ont][go.replace('_', ':')] = (score, desc)
 
     with open(out_file, 'w') as fp:
+        fp.write('Query_ID\tGO_ID\tScore\tAspect\tDescription\n')
         for prot, onts in pred.items():
             for ont, gos in onts.items():
                 for go, (score, desc) in gos.items():
