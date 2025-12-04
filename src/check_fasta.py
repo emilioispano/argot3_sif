@@ -22,7 +22,7 @@ def normalize_fasta_header(header):
       - Already universal (>ID stuff, with no '|') → unchanged
       - Otherwise → raise ValueError
     """
-    #header = header.rstrip('\n\r')
+    header = header.rstrip('\n\r')
 
     # 1. UniProt style?
     m = uniprot_re.match(header)
