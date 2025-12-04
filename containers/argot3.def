@@ -3,13 +3,6 @@ From: nvcr.io/nvidia/tensorflow:24.01-tf2-py3
 Stage: build
 
 
-%setup
-    mkdir -p /argot3/src/
-    mkdir -p /argot3/input/go/
-    mkdir -p /argot3/input/structure/
-    mkdir -p /argot3/input/weights/
-
-
 %files
     ../input/go/* /argot3/input/go/
     ../input/structure/* /argot3/input/structure/
