@@ -7,12 +7,12 @@ import re
 # UniProt-like header:
 # >sp|PROTID|rest of header
 # >tr|PROTID|rest of header
-uniprot_re = re.compile(r'^>(sp|tr)\|([^|]+)\|(.+)$')
+uniprot_re = re.compile(r'^>(sp|tr)\|([A-Za-z0-9]+)\|(.+)$')
 
 # "Universal" header:
 # >PROTID rest of header
 # (no pipes allowed anywhere)
-universal_re = re.compile(r'^>(\S+)(?:\s+.*)?$')
+universal_re = re.compile(r'^>([A-Za-z0-9_|.-]+)(?:\s+.*)?$')
 
 
 def normalize_fasta_header(header):
